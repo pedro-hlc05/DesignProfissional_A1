@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de IMC</title>
+</head>
+
+<body>
+    <h2>Calculo de IMC</h2>
+    <label for="nome">Nome completo</label>
+    <imput type="number" id="peso" name="peso" step="0.1"><br><br>
+
+    <label for="peso">Peso em (kg):</label>
+    <imput type="number" id="peso" name="peso" step="0.1"><br><br>
+        
+    <label for="altura">altura em (m):</label>
+    <imput type="number" id="altura" name="altura" step="0.1"><br><br>
+    
+    <button>Calcular IMC</button>
+    <h3>resultado</h3>
+    
+    <script>
+        function calcularIMC() 
+        {
+
+            let peso = persefloat(document.getElementById("peso").value);
+            let altura = persefloat(document.getElementById("altura").value);
+
+            let resultado
+            let imc
+            return resultado;
+        }
+        if (resultado < 18.5) { 
+            console.log("Abaixo do peso"); 
+            alert(nome + "\nSeu IMC é: " + resultado + "\nVocê está abaixo do peso");
+        }
+        else if (resultado > 18.5 && resultado < 24.9) 
+        { console.log("Peso normal"); 
+        alert(nome + "\nSeu IMC é: " + resultado + "\nVocê está com o peso normal");
+
+        }
+        else if (resultado > 25.0 && resultado < 29.9) 
+        {
+            console.log("Sobrepeso");
+            alert(nome + "\nSeu IMC é: " + resultado + "\nVocê está com sobrepeso");
+        }
+        else (resultado > 30.0) 
+        {
+            console.log("Obesidade");
+        alert(nome + "\nSeu IMC é: " + resultado + "\nVocê está com obesidade");
+       }
+         
+       DocumentTypebutton.addEventListener("clique", calcularIMC); 
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,183 @@
+/* style.css */
+
+/* --- Configurações Globais --- */
+.card img {
+    max-width: 30%;
+    height: auto;
+
+
+}
+:root {
+    --cor-principal: #28a745; 
+    --cor-secundaria: #6c757d; 
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #343a40; 
+    --cor-destaque-claro: #d4edda;
+    --cor-destaque-medio: #c3e6cb; 
+    --cor-borda-tabela: #a1d9b4; 
+    --cor-botao-submit: #28a745; 
+    --cor-botao-hover: #218838; 
+    --cor-input-borda: #ced4da; 
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--cor-texto);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e0e0e0; 
+    text-decoration: underline;
+}
+
+
+header {
+    background-color: var(--cor-principal); 
+    padding: 15px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; 
+}
+
+nav a {
+    font-weight: bold;
+    color: white; 
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent; 
+}
+
+nav a:hover {
+    color: #f0f0f0; 
+    border-bottom: 2px solid #f0f0f0; 
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px; 
+    margin-bottom: 20px;
+    border-radius: 4px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+hr { 
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+
+#apresentacao p {
+    margin-bottom: 10px;
+}
+
+
+#cronograma h2 {
+    margin-bottom: 20px;
+}
+
+#cronograma table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid var(--cor-borda-tabela); 
+}
+
+#cronograma th, #cronograma td {
+    padding: 10px 15px; 
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda-tabela); 
+}
+
+#cronograma th {
+    background-color: var(--cor-principal); 
+    color: white;
+    font-weight: normal; 
+    text-transform: uppercase; 
+    font-size: 0.9rem;
+}
+
+
+#cronograma tbody tr:nth-child(even) {
+    background-color: var(--cor-destaque-claro); 
+}
+
+#cronograma tbody tr:nth-child(odd) {
+    background-color: white; 
+}
+
+
+.palestra { background-color: var(--cor-destaque-claro); } 
+.intervalo { background-color: var(--cor-azul-claro); } 
+.workshop { background-color: var(--cor-destaque-medio); } 
+
+
+#cronograma tbody tr:hover {
+    background-color: #e0ffe0; 
+}
+
+
+
+#speakers h2 {
+    margin-bottom:10px;
+}
+
+.speaker-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Mantém 30px de espaço entre eles */
+    /* ... */
+}
+
+.speaker-card {
+    /* (100% - (2 * 30px de gap)) / 3 itens */
+    width: calc((100% - 60px) / 3); 
+    
+    /* Isso garante que 3 cards caibam exatamente na linha, respeitando os 30px de gap! */
+
+    min-width: 250px; 
+    /* ... outros estilos ... */
+}
